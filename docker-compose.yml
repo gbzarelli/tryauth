@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:latest
+    container_name: keycloak
+    volumes:
+      - ./.keycloak:/opt/keycloak/data/import
+    command:
+      - "start-dev --import-realm"
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    ports:
+      - 9002:8080
