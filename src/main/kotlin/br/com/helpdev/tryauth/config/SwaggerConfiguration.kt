@@ -24,7 +24,7 @@ class SwaggerConfiguration {
         return OpenAPI().addSecurityItem(SecurityRequirement().addList("Bearer Authentication"))
             .components(Components().addSecuritySchemes("Bearer Authentication", createAPIKeyScheme())).info(
                 Info().title("TryAuth REST API")
-                    .description("Authorization and autentication sample with resource server (keycloak)")
+                    .description("Authorization and authentication sample with resource server (keycloak)")
                     .version("1.0").contact(
                         Contact().name("Guilherme Biff Zarelli").email("gbzarelli@helpdev.com.br")
                             .url("https://www.helpdev.com.br")
